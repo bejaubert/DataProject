@@ -1,1 +1,2 @@
 Ceci est un test !
+Les push se feront sur la branche staging, merci !
