@@ -1,0 +1,1866 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="58">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.ControlParam.ControlParam">
+        <Position x="3774" y="54" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Paramètre de contrôle (59)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="60">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="3930" y="126" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Mettre à jour la valeur</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="61">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.ControlParam.ControlParam">
+        <Position x="78" y="90" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Paramètre de contrôle (61)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="78" y="210" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Mettre à jour la valeur</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="66">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="3558" y="618" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Mettre à jour la valeur</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="3749" y="209" width="307" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Chargement dans la base de données</Caption>
+          <Style TextColor="#314c4a" FillColor="#80ffff" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Chargement dans la base de données</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="7">
+          <GuiSettings Plugin="LockInGui.LockInStreamIn.LockInStreamIn">
+            <Position x="3774" y="258" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Connection>dbcac40</Connection>
+              <CreateMode>TempTable</CreateMode>
+              <Table />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Source=dbcac40
+Table temporaire</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo LockIn="True">
+                <Field name="Date" source="In-DB:DB=dbcac40;" type="Date" />
+                <Field name="Open" source="In-DB:DB=dbcac40;" type="Double" />
+                <Field name="High" source="In-DB:DB=dbcac40;" type="Double" />
+                <Field name="Low" source="In-DB:DB=dbcac40;" type="Double" />
+                <Field name="Close" source="In-DB:DB=dbcac40;" type="Double" />
+                <Field name="Volume" source="In-DB:DB=dbcac40;" type="Double" />
+                <Field name="Dividends" source="In-DB:DB=dbcac40;" type="Double" />
+                <Field name="Stock Splits" source="In-DB:DB=dbcac40;" type="Double" />
+                <Field name="date_modification" source="In-DB:DB=dbcac40;" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInStreamIn" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="LockInGui.LockInOutput.LockInOutput">
+            <Position x="3930" y="258" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormatSpecificOptions />
+              <Table>data_total</Table>
+              <CreateMode>Append</CreateMode>
+              <AppendMode>ByName</AppendMode>
+              <AppendFieldMode>All</AppendFieldMode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Table=data_total</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo LockIn="True">
+                <Field name="Date" source="In-DB:DB=dbcac40;" type="Date" />
+                <Field name="Open" source="In-DB:DB=dbcac40;" type="Double" />
+                <Field name="High" source="In-DB:DB=dbcac40;" type="Double" />
+                <Field name="Low" source="In-DB:DB=dbcac40;" type="Double" />
+                <Field name="Close" source="In-DB:DB=dbcac40;" type="Double" />
+                <Field name="Volume" source="In-DB:DB=dbcac40;" type="Double" />
+                <Field name="Dividends" source="In-DB:DB=dbcac40;" type="Double" />
+                <Field name="Stock Splits" source="In-DB:DB=dbcac40;" type="Double" />
+                <Field name="date_modification" source="In-DB:DB=dbcac40;" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="3821" y="486" width="428" height="228" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Extraction des valeurs invalides</Caption>
+          <Style TextColor="#314c4a" FillColor="#800080" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Extraction des valeurs invalides</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="52">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="3847" y="535" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="type_erreur" size="2147483647" source="TextInput:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="54">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="4122" y="558" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="25">C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\unvalid_data.xlsx|||Feuille1</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <PreserveFormat>False</PreserveFormat>
+                <UNCLocal>False</UNCLocal>
+                <SkipFieldNames>False</SkipFieldNames>
+                <OutputOption>Overwrite</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>unvalid_data.xlsx
+Query=Feuille1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="67">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="4026" y="570" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="type_erreur" size="2147483647" source="TextInput:" type="V_String" />
+                <Field name="source" size="2147483647" source="TextInput:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="64">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="3846" y="630" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="source" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>bug</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="source" size="2147483647" source="TextInput:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="3282" y="318" width="339" height="205" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Récupération des lignes aux valeurs abérrantes</Caption>
+          <Style TextColor="#314c4a" FillColor="#ff8040" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Récupération des lignes aux valeurs abérrantes</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="48">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="3307" y="367" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Date" />
+                <Field name="Open" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="High" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Low" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Close" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Volume" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Dividends" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Stock Splits" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="date_modification" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="49">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="3307" y="439" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="type_erreur" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>Valeur aberrante</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="type_erreur" size="2147483647" source="TextInput:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="50">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="3391" y="403" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Allow</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Date" />
+                <Field name="Open" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="High" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Low" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Close" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Volume" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Dividends" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Stock Splits" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="date_modification" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="DateTime" />
+                <Field name="type_erreur" size="2147483647" source="TextInput:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="642" y="342" width="348" height="168" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Récupération des lignes aux valeurs manquantes</Caption>
+          <Style TextColor="#314c4a" FillColor="#ff8040" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Récupération des lignes aux valeurs manquantes</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="45">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="763" y="391" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Error</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="type_erreur" size="2147483647" source="TextInput:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="46">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="667" y="426" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="type_erreur" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>Valeur manquante</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="type_erreur" size="2147483647" source="TextInput:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="570" y="138" width="227" height="133" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Filtrage sur les valeurs null</Caption>
+          <Style TextColor="#314c4a" FillColor="#0080ff" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Filtrage sur les valeurs null</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="43">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="595" y="187" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>!(IsNull([Volume]) &amp;&amp; IsNull([Date]) &amp;&amp; IsNull([Open]) &amp;&amp; IsNull([High]) &amp;&amp; IsNull([Low]) &amp;&amp; IsNull([Close]) &amp;&amp; IsNull([Dividends]) &amp;&amp; IsNull([Stock Splits]) &amp;&amp; IsNull([date_modification]))</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText><![CDATA[ ]]></AnnotationText>
+              <DefaultAnnotationText>!(IsNull([Volume]) &amp;&amp; IsNull([Date]) &amp;&amp; IsNull([Open]) &amp;&amp; IsNull([High]) &amp;&amp; IsNu...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2838" y="114" width="403" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Filtres sur valeur abérrantes</Caption>
+          <Style TextColor="#314c4a" FillColor="#0080ff" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Filtres sur valeur abérrantes</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="39">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2863" y="163" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Date] &lt;= DateTimeToday() &amp;&amp; [Date] &gt; "1987-12-31"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText><![CDATA[filtre valeurs abérrantes sur Date ]]></AnnotationText>
+              <DefaultAnnotationText>[Date] &lt;= DateTimeToday() &amp;&amp; [Date] &gt; "1987-12-31"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Date" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Date" />
+                <Field name="Open" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="High" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Low" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Close" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Volume" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Dividends" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Stock Splits" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="date_modification" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Date" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Date" />
+                <Field name="Open" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="High" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Low" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Close" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Volume" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Dividends" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Stock Splits" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="date_modification" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="40">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2983" y="163" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>ToDate([Date]) &lt;= DateTimeToday() &amp;&amp; ToDate([Date]) &gt; "1987-12-31"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>filtre valeurs abérrantes sur Date modification</AnnotationText>
+              <DefaultAnnotationText>ToDate([Date]) &lt;= DateTimeToday() &amp;&amp; ToDate([Date]) &gt; "1987-12-31"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Date" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Date" />
+                <Field name="Open" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="High" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Low" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Close" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Volume" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Dividends" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Stock Splits" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="date_modification" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Date" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Date" />
+                <Field name="Open" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="High" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Low" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Close" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Volume" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Dividends" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Stock Splits" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="date_modification" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="41">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="3127" y="163" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Open] &gt;= 0 &amp;&amp; [High] &gt;= 0 &amp;&amp; [Low] &gt;= 0 &amp;&amp; [Close] &gt;= 0 &amp;&amp; [Volume] &gt;= 0 &amp;&amp; [Dividends] &gt;= 0 &amp;&amp; [Stock Splits] &gt;= 0</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>filtre valeurs abérrantes  sur les champs numériques</AnnotationText>
+              <DefaultAnnotationText>[Open] &gt;= 0 &amp;&amp; [High] &gt;= 0 &amp;&amp; [Low] &gt;= 0 &amp;&amp; [Close] &gt;= 0 &amp;&amp; [Volume] &gt;= 0 &amp;&amp; [Di...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Date" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Date" />
+                <Field name="Open" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="High" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Low" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Close" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Volume" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Dividends" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Stock Splits" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="date_modification" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Date" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Date" />
+                <Field name="Open" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="High" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Low" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Close" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Volume" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Dividends" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Stock Splits" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="date_modification" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="53" y="329" width="250" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Entrée de données</Caption>
+          <Style TextColor="#314c4a" FillColor="#80ff80" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Entrée de données</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="78" y="378" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>ACA.PA_Historical_Data.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="69">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+            <Position x="174" y="378" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Last</Mode>
+              <N>1</N>
+              <GroupFields orderChanged="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>1 dernières lignes</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="305" y="113" width="200" height="133" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Formatage pour filtre</Caption>
+          <Style TextColor="#314c4a" FillColor="#0080ff" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Formatage pour filtre</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="68">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="330" y="162" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2418" y="114" width="195" height="133" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Formatage des types</Caption>
+          <Style TextColor="#314c4a" FillColor="#0080ff" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Formatage des types</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2443" y="163" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Date" selected="True" type="Date" size="10" />
+                <SelectField field="Open" selected="True" type="Double" size="8" />
+                <SelectField field="High" selected="True" type="Double" size="8" />
+                <SelectField field="Low" selected="True" type="Double" size="8" />
+                <SelectField field="Close" selected="True" type="Double" size="8" />
+                <SelectField field="Volume" selected="True" type="Double" size="8" />
+                <SelectField field="Dividends" selected="True" type="Double" size="8" />
+                <SelectField field="Stock Splits" selected="True" type="Double" size="8" />
+                <SelectField field="date_modification" selected="True" type="DateTime" size="19" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Date" />
+                <Field name="Open" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="High" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Low" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Close" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Volume" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Dividends" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="Stock Splits" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="Double" />
+                <Field name="date_modification" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2334" y="318" width="345" height="217" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption><![CDATA[Récupération des lignes aux formats incorrectes ]]></Caption>
+          <Style TextColor="#314c4a" FillColor="#ff8040" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText><![CDATA[Récupération des lignes aux formats incorrectes ]]></AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="32">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="2359" y="367" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Ignore</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="33">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+            <Position x="2455" y="391" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <CartesianMode>Allow</CartesianMode>
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="type_erreur" size="2147483647" source="TextInput:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+        </Node>
+        <Node ToolID="31">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="2359" y="451" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="type_erreur" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>Format des données</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="type_erreur" size="2147483647" source="TextInput:" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1842" y="126" width="480" height="180" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Filtrage des champs date et datetime en fonction du format des données</Caption>
+          <Style TextColor="#314c4a" FillColor="#0080ff" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Filtrage des champs date et datetime en fonction du format des données</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1867" y="175" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>REGEX_Match([Date], '[-\d]+' ) &amp;&amp; Length([Date]) == 10</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>filtre caractère sur Date</AnnotationText>
+              <DefaultAnnotationText>REGEX_Match([Date], '[-\d]+' ) &amp;&amp; Length([Date]) == 10</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2191" y="175" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>REGEX_Match([date_modification], '[-\d: ]+' ) &amp;&amp; Length([date_modification]) == 19</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>filtre caractère sur Date modification</AnnotationText>
+              <DefaultAnnotationText>REGEX_Match([date_modification], '[-\d: ]+' ) &amp;&amp; Length([date_modification]) == ...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1038" y="138" width="717" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Filtrage des champs numérique en fonction du format des données</Caption>
+          <Style TextColor="#314c4a" FillColor="#0080ff" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Filtrage des champs numérique en fonction du format des données</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1063" y="187" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>REGEX_Match([Open], '^-?\d+(\.\d+)?$' )</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>flitre caractère sur Open</AnnotationText>
+              <DefaultAnnotationText>REGEX_Match([Open], '^-?\d+(\.\d+)?$' )</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1159" y="187" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>REGEX_Match([High], '^-?\d+(\.\d+)?$' )</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>filtre caractère sur High</AnnotationText>
+              <DefaultAnnotationText>REGEX_Match([High], '^-?\d+(\.\d+)?$' )</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1255" y="187" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>REGEX_Match([Low], '^-?\d+(\.\d+)?$' )</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>filtre caractère sur Low</AnnotationText>
+              <DefaultAnnotationText>REGEX_Match([Low], '^-?\d+(\.\d+)?$' )</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1351" y="187" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>REGEX_Match([Close], '^-?\d+(\.\d+)?$' )</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>filtre caractère sur Close</AnnotationText>
+              <DefaultAnnotationText>REGEX_Match([Close], '^-?\d+(\.\d+)?$' )</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1447" y="187" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>REGEX_Match([Volume], '^-?\d+(\.\d+)?$' )</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>filtre caractère sur Volume</AnnotationText>
+              <DefaultAnnotationText>REGEX_Match([Volume], '^-?\d+(\.\d+)?$' )</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1543" y="187" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>REGEX_Match([Dividends], '^-?\d+(\.\d+)?$' )</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>filtre caractère sur Dividends</AnnotationText>
+              <DefaultAnnotationText>REGEX_Match([Dividends], '^-?\d+(\.\d+)?$' )</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1639" y="187" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>REGEX_Match([Stock Splits], '^-?\d+(\.\d+)?$' )</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>filtre caractère sur Stock Splits</AnnotationText>
+              <DefaultAnnotationText>REGEX_Match([Stock Splits], '^-?\d+(\.\d+)?$' )</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Date" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Open" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="High" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Low" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Close" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Volume" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Dividends" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="Stock Splits" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+                <Field name="date_modification" size="254" source="File: C:\Users\Benja\OneDrive\Bureau\Cac40\DataProject\financial_data_lake\ACA.PA_Historical_Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection name="#1">
+      <Origin ToolID="59" Connection="Question" />
+      <Destination ToolID="60" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="59" Connection="Question" />
+      <Destination ToolID="66" Connection="Question" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="60" Connection="Action" />
+      <Destination ToolID="9" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="61" Connection="Question" />
+      <Destination ToolID="62" Connection="Question" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="62" Connection="Action" />
+      <Destination ToolID="3" Connection="Action" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="66" Connection="Action" />
+      <Destination ToolID="64" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="67" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="67" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="50" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="49" Connection="Output" />
+      <Destination ToolID="50" Connection="Source" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="45" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="False" />
+      <Destination ToolID="45" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="True" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="True" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="39" Connection="False" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="40" Connection="False" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="41" Connection="False" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="True" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="True" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Output" />
+      <Destination ToolID="68" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="33" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="33" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="True" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="25" Connection="False" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="27" Connection="False" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection name="#9">
+      <Origin ToolID="12" Connection="False" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection name="#8">
+      <Origin ToolID="14" Connection="False" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection name="#7">
+      <Origin ToolID="17" Connection="False" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection name="#6">
+      <Origin ToolID="18" Connection="False" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection name="#5">
+      <Origin ToolID="19" Connection="False" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="20" Connection="False" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="21" Connection="False" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="True" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="True" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="True" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="True" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="True" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="True" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="True" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>ControlParam.Paramètre de contrôle (59)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>ControlParam.Paramètre de contrôle (61)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>ETL</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="2f0f8351-ba5a-47ea-8de1-dbc1655781b0" />
+      <Telemetry>
+        <PreviousWorkflowId value="97f5b6aa-eec1-4931-90f5-59a31c11e52e" />
+        <OriginWorkflowId value="52440499-940f-4387-b6dc-c89bad96f322" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="60" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="True" />
+              <ReplaceText>total</ReplaceText>
+              <Destination>9/Table</Destination>
+            </Action>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="62" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="False" />
+              <Destination>3/File</Destination>
+            </Action>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="66" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="False" />
+              <Destination>64/Data/r/c</Destination>
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Onglet (58)</Name>
+          <ToolId value="58" />
+          <Questions>
+            <Question>
+              <Type>ControlParam</Type>
+              <Description>nom de action</Description>
+              <Name>Paramètre de contrôle (59)</Name>
+              <ToolId value="59" />
+            </Question>
+            <Question>
+              <Type>ControlParam</Type>
+              <Description>Path</Description>
+              <Name>Paramètre de contrôle (61)</Name>
+              <ToolId value="61" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="0" />
+      <MacroInputs />
+      <MacroOutputs />
+      <BatchMacro>
+        <OutputMode>AllSame</OutputMode>
+        <ControlParams>
+          <ControlParam>
+            <Name>Paramètre de contrôle (59)</Name>
+            <Description>nom de action</Description>
+          </ControlParam>
+          <ControlParam>
+            <Name>Paramètre de contrôle (61)</Name>
+            <Description>Path</Description>
+          </ControlParam>
+        </ControlParams>
+      </BatchMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="54" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

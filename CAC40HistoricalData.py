@@ -50,6 +50,9 @@ class CAC40HistoricalData:
         """
         filename = f"{ticker_symbol}_Historical_Data.csv"
         filepath = os.path.join(self.save_path, filename)
+        data.index = data.index.strftime("%Y-%m-%d") # corrige le problème de date en visualisant l'excel
+        current_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        data['date_modification'] = current_date
         data.to_csv(filepath)
         print(f"Saved historical data for {ticker_symbol} in {filepath}")
 
